@@ -12,19 +12,27 @@ import{ HttpClient } from '@angular/common/http'
 
 export class MainComponent {
 
-  imageUrl?: string;
+  imageUrl!: string;
 
 
   constructor(private http:HttpClient) {
   }
   
   
-  loadImage() {
-    this.http.get<{ message: string }>('https://dog.ceo/api/breeds/image/random').subscribe(data => {
-      console.log(data);
-      this.imageUrl = data.message;
-    });
+  load(event:any) {
+  console.log('logged');
+  
   }
+  getUrl(event:any) {
+   this.imageUrl=event
+    
+  }
+  // loadImage() {
+  //   this.http.get<{ message: string }>('https://dog.ceo/api/breeds/image/random').subscribe(data => {
+  //     console.log(data);
+  //     this.url = data.message;
+  //   });
+  // }
 
   // loadImage() {
   //   this.http.get('https://dog.ceo/api/breeds/image/random').subscribe(data => {

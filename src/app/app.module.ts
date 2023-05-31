@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './index/main/main.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from './shared/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
